@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "codeless-assignment"
+    }
+  },
+  "defaultProject": "codeless-assignment",
+  "cli": {
+    "analytics": "d6185bd8-5973-4fc3-873e-40cf38c2a1a1"
+  }
 }

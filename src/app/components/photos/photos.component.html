@@ -1,0 +1,25 @@
+<div class="container p-0 mt-3">
+      <div id="grid" class="row">
+        <div
+          class="mix col-sm-2 page1 page4"
+          *ngFor="let photo of photos$ | async"
+        >
+          <div class="item-img-wrap">
+            <img [src]="photo.url" class="img-responsive" alt="working" />
+          </div>
+          <p class="text-muted text-center">
+            <small>{{ photo.title }}</small>
+          </p>
+        </div>
+      </div>
+      <!--grid-->
+
+
+  <app-paginator
+    *ngIf="pagination$ | async as pagination"
+    [pagination]="pagination"
+    [currentPage]="currentPage"
+    [basePath]="CONTAINER_ROUTE"
+    pagesToShow="10"
+  ></app-paginator>
+</div>

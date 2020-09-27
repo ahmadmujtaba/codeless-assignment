@@ -1,0 +1,22 @@
+<div class="row gallery-bottom">
+  <div class="col-sm-6">
+    <ul class="pagination">
+      <li
+        class="page-item"
+        [class.active]="currentPage === page"
+        *ngFor="let page of pages"
+      >
+        <a [routerLink]="[basePath]" [queryParams]="{ page: page }">{{
+          page
+        }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-sm-6 text-right">
+    <em
+      >
+      All results: {{ pagination.count }}
+      </em
+    >
+  </div>
+</div>
